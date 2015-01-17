@@ -1,0 +1,15 @@
+{
+  "name": "svgtest",
+  "version": "1.0.0",
+  "author": "Forrest Tanaka <forrest@forrest-tanaka.com>",
+  "jshintConfig": {
+    "strict": false
+  },
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.4.x",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-sass": "~0.7.2",
+    "grunt-contrib-compass": "~0.7.2"
+  }
+}
