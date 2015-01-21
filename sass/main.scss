@@ -133,3 +133,21 @@ figcaption {
     font-size: 1.7em;
     line-height: 1.6;
 }
+
+
+.references {
+    @include font-size(1);
+    border-top: 1px solid #e8e8e8;
+}
+
+
+.citation {
+    margin: 20px 0;
+    color: #808080;
+    font-size: 1.2em;
+}
+
+
+.journal {
+    font-style: italic;
+}
