@@ -1,3 +1,11 @@
+<?php
+include_once "lib/Parsedown.php";
+include_once "lib/Spyc.php";
+$content = spyc_load_file("./content/main.yaml");
+error_log(print_r($content,true));
+$Parsedown = new Parsedown();
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -23,24 +31,26 @@
         <div class="row">
             <header class="col-xm-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                 <h1>4-Dimensinal Nucleome Portal</h1>
-                <p class="note">This is a component of two proposals, 4DN Organizational Hub (1U01CA200120-01) and 4DN Data Coordination and Integration Center (1U01CA200134-01).</p>
+                <p class="note"><?php echo $content['note'] ?></p>
                 <a href="http://commonfund.nih.gov/4Dnucleome/index" class="btn btn-theme">NIH 4D Nucleome Snapshot</a>
             </header>
             <figure class="banner col-sm-12 col-md-8 col-md-offset-2">
                 <img class="img-responsive" src="img/4d-nucleome.jpg">
-                <figcaption>Image credits: http://upload.wikimedia.org/wikipedia/commons/0/09/FluorescentCells.jpg, A 3-D model of the mouse X chromosome from single-cell Hi-C data, courtesy of Takeshi Nagano and Tim Stevens</figcaption>
+                <figcaption><?php echo $content['caption'] ?></figcaption>
             </figure>
             <section class="description col-sm-12 col-md-10 col-md-offset-1">
-                <p class="main-text">Now, with the 4D Nucleome Project, scientists are ready to take the next step — cataloguing which parts of the genome are where within the nucleus in various cell types over time. These data will tell us even more about how genes are differentially regulated and what can go wrong with this process in diseased cells. This project will teach us so much…stay tuned!</p>
-                <p class="sub-text">For some time now scientists have known that there is more to the genetic code than the A’s, G’s, C’s, and T’s that DNA is made of. For the past decade scientists have catalogued which proteins are bound where, and which chemical groups decorate the DNA. The ENCODE and Roadmap Epigenomics projects have taught us a lot about how our cells work.</p>
+            <?php
+                echo $Parsedown->text($content['main']);
+            ?>
             </section>
             <section class="references col-xs-12">
-                <div class="citation">
-                    Jeffery Perkel (2014) Nuclear Cartography. <span class="journal">The Scientist</span>.  <<a href="http://www.the-scientist.com/?articles.view/articleNo/41008/title/Nuclear-Cartography/">http://www.the-scientist.com/?articles.view/articleNo/41008/title/Nuclear-Cartography/</a>>.
-                </div>
-                <div class="citation">
-                    Takashi Nagano, et al. (2013) “Single-cell Hi-C reveals cell-to-cell variability in chromosome structure.” <span class="journal">Nature</span> 502, 59–64 (03 October 2013) doi:10.1038/nature12593
-                </div>
+                <?php
+                foreach($content['cite'] as $cite) {
+                    echo '<div class="citation">';
+                    echo $Parsedown->text($cite);
+                    echo '</div>';
+                }
+                ?>
             </section>
         </div>
     </div> <!-- /container -->
