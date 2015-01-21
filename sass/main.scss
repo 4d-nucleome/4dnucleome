@@ -76,6 +76,11 @@ body {
     right: 0;
     bottom: 0;
     @include background-image(linear-gradient(left top, rgba($theme-color,0.95) 0%,rgba(darken($theme-color,10%),0.95) 99%,rgba(darken($theme-color,10%),0.8) 100%));
+
+    .no-multiplebgs & {
+        background-image: none;
+        background-color: $theme-color;
+    }
 }
 
 
