@@ -30,7 +30,7 @@ $Parsedown = new Parsedown();
     <div class="container">
         <div class="row">
             <header class="col-xm-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                <h1>4-Dimensinal Nucleome Portal</h1>
+                <h1>4-Dimensional Nucleome Portal</h1>
                 <p class="note"><?php echo $content['note'] ?></p>
                 <a href="http://commonfund.nih.gov/4Dnucleome/index" class="btn btn-theme">NIH 4D Nucleome Snapshot</a>
             </header>
