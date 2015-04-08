@@ -1,5 +1,5 @@
 note: >
-    This is a component of two proposals, 4DN Organizational Hub (1U01CA200120-01) and 4DN Data Coordination and Integration Center (1U01CA200134-01).
+     Companion website for two proposals, 4DN Organizational Hub (Cherry, 1U01CA200120-01) and 4DN Data Coordination and Integration Center (Taylor, Cherry and Gaffney, 1U01CA200134-01).
 caption: >
     This 3-D model from single-cell Hi-C data represents how the mouse X chromosome is folded in a certain cell at a certain time. It will look different in different cells and/or at different times. (Takeshi Nagano and Tim Stevens/Wikimedia Commons)
 main: |
@@ -8,4 +8,4 @@ main: |
     Now the 4DN Nucleome project is set to take us to the next level of understanding genome function by cataloguing which parts of the genome are where within the nucleus in various cell types over time. This data will tell us even more about how genes are differentially regulated and what can go wrong with this process in diseased cells. This project will teach us so much…stay tuned!
 cite:
     - Jeffery Perkel (2014) “Nuclear Cartography.” *The Scientist*. <http://www.the-scientist.com/?articles.view/articleNo/41008/title/Nuclear-Cartography>.
-    - Takashi Nagano, et al. (2013) “Single-cell Hi-C reveals cell-to-cell variability in chromosome structure.” *Nature* 502, 59–64 (03 October 2013) doi:10.1038/nature12593
+    - Takashi Nagano, et al. (2013) “Single-cell Hi-C reveals cell-to-cell variability in chromosome structure.” *Nature* 502, 59–64 (03 October 2013) <http://www.nature.com/nature/journal/v502/n7469/full/nature12593.html>
